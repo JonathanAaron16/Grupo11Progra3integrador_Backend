@@ -1,9 +1,4 @@
-/* Los middlewares son simplemente funciones que se ejecutan entre la peticion (request -> req) y la respuesta (response -> res)
 
-Middleware de aplicacion: Es una funcion que se ejecuta en todas las rutas
-
-Middleware de ruta: Es una funcion que se ejecuta en alguna rutas
-*/
 
 // Middleware logger que muestra por consola todas las solicitudes
 const loggerUrl = (req, res, next) => {

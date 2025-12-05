@@ -18,7 +18,7 @@ import { productRoutes , viewRoutes } from "./src/api/routes/index.js";
 // Importamos la configuracion para trabajar con rutas y archivos estaticos
 import { join, __dirname } from "./src/api/utils/index.js";
 import connection from "./src/api/database/db.js";
-import { handleMulterError } from "./src/api/middlewares/multer-middlewares.js";
+
 
 import session from "express-session";
 const SESSION_KEY = environments.session_key;
@@ -123,12 +123,7 @@ app.get("/modificar",requireLogin, (req, res) => {
         about: "Actualizar producto"
     });
 })
-app.get("/subirImg", (req, res) => {
-    res.render("subirImg", {
-        title: "subirImg"
-       
-    });
-})
+
 
 app.get("/eliminar", requireLogin,(req, res) => {
     res.render("eliminar", {
@@ -207,7 +202,7 @@ app.post("/logout", (req, res) => {
     });
 });
 
-app.use(handleMulterError)
+
 
 
 

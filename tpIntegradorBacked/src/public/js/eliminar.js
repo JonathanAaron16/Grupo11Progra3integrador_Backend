@@ -59,13 +59,7 @@ function mostrarError(message) {
 }
 
 
-    /* Que es FormData?
-
-    En JavaScript, FormData es un objeto que permite crear un conjunto de pares clave-valor que representan los campos de un formulario HTML y sus valores, facilitando su envío a un servidor mediante métodos como fetch o XMLHttpRequest.
-    Este objeto replica la funcionalidad de un formulario HTML y se utiliza comúnmente para enviar datos de formularios, incluyendo archivos, de manera dinámica sin recargar la página
-
-    Este objeto es especialmente útil en aplicaciones modernas que requieren enviar datos de forma asincrónica, ya que simplifica el manejo de formularios, incluyendo campos de texto, casillas de verificación, botones de radio y campos de carga de archivos*/
-});
+ });
 
 function mostrarProducto(producto) {
     console.table(producto); // El producto se recibe correctamente

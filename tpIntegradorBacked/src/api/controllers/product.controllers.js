@@ -18,10 +18,6 @@ export const getAllProducts = async (req, res) => {
         });
         // Optimizacion 2: Devolver un mensaje haya o no haya productos
 
-        /* El término "payload" en el contexto de bases de datos se refiere 
-        a la parte de los datos transmitidos que constituye el mensaje real 
-        o la información útil, excluyendo los encabezados, metadatos o información de control necesaria para la entrega del mensaje*/
-
     } catch (error) {
         console.error("Error obteniendo productos", error.message);
 
@@ -113,14 +109,6 @@ export const createProduct = async (req, res) => {
 // PUT-> Actualizar producto
 export const modifyProduct = async (req, res) => {
     try {
-        /*{
-            "id": "2",
-            "name": "hamburguesa salmon",
-            "image": "https://burgernj.com/wp-content/uploads/2021/05/Salmon-Burger_.jpg",
-            "category": "food",
-            "price": "2500.00",
-            "active": "1"
-        }*/
 
         // Gracias al middleware express.json() convertimos el JSON previo en un objeto JS al que podemos hacer destructuring y almacenar en variables sus valores
         let { id, nombre, img_url, tipo, precio, activo } = req.body;

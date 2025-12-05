@@ -3,7 +3,7 @@ const router = Router(); // Lo mismo que hacemos en express con const app = expr
 
 import { validateId } from "../middlewares/middlewares.js"; // Importamos validateId
 import { createProduct, getAllProducts, getProductById, modifyProduct, removeProduct } from "../controllers/product.controllers.js";
-import { multerUploader } from "../middlewares/multer-middlewares.js";
+
 
 
 // GET all products -> Traer todos los productos
@@ -17,10 +17,7 @@ router.get("/:id", validateId , getProductById);
 // POST -> Crear nuevo producto
 router.post("/", createProduct);
 
-router.post("/upload", multerUploader.single("image"), (req,res) =>{
-    console.log("imgen subida correctamente");
-    console.log(req.file);       
-})
+
 
 // PUT-> Actualizar producto
 router.put("/", modifyProduct);

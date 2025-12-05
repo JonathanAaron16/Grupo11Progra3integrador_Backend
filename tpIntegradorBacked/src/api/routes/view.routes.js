@@ -7,11 +7,7 @@ router.get("/", requireLogin);
 
 router.get("/consultar", requireLogin, (req, res) => {
 
-    /* Para no tener que repetir todo esto, exportamos esta logica al middleware requireLogin
-    if(!req.session.user) {
-        return res.redirect("/login");
-    }
-    */
+    
     res.render("consultar", {
         title: "Consultar",
         about: "Consultar producto por id"

@@ -7,31 +7,15 @@ altaProducts_form.addEventListener("submit", event => {
 
     let formData = new FormData(event.target); // Obtenemos la data del formulario en un FormData
     console.log(formData);
-    /*FormData(4) { 
-        name → "Manaos Pomelo", 
-        image → "https://live.staticflickr.com/65535/52470400378_52f5664294_m.jpg", 
-        category → "drink", 
-        price → "800" 
-    }*/
+    /*FormData(4) */
 
     let data = Object.fromEntries(formData.entries()); // Parseamos esta data del form data en un objeto JS
     console.log(data);
-    /*Object { 
-        name: "Manaos Pomelo", 
-        image: "https://live.staticflickr.com/65535/52470400378_52f5664294_m.jpg", 
-        category: "drink", 
-        price: "800" 
-    }
-    */
+    /*Object*/
 
     // Los datos se enviaran asi, como JSON, parseando nuestros valores de objeto JS
     console.log(JSON.stringify(data));
-    /*{
-        "name":"Manaos Pomelo",
-        "image":"https://live.staticflickr.com/65535/52470400378_52f5664294_m.jpg",
-        "category":"drink",
-        "price":"800"
-       }*/
+   
 
     // Le enviamos el objeto del formulario a una funcion que se encargara de hacer la peticion fetch
     enviarProducto(data);

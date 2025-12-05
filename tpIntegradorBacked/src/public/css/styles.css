@@ -75,14 +75,19 @@ justify-content: space-between;
 align-items: center;
 width: 75%;
 }
-
+/*///////////////IMAGENES//////////////////////*/
 .li-listados img {
 width: 65px;
 }
 
+
+
 .li-listados p, .li-listados img {
 margin-bottom: 0;
 }
+
+/*///////////////BOTONES//////////////////////*/
+
 
 .li-botonera {
 display: flex;
@@ -107,6 +112,7 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+/*///////////////ERROR//////////////////////*/
 
 .mensaje-error strong {
 color: #ae4f4e;
